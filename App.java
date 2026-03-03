@@ -21,9 +21,14 @@ public class App {
 
         try {
             Triangle t = new Triangle(side1, side2, side3, color, filled);
+            System.out.println("\n--- RESULTADOS ---");
             System.out.println(t.toString());
+            System.out.println("Área: " + t.getArea());
+            System.out.println("Perímetro: " + t.getPerimeter());
+            System.out.println("Color: " + t.getColor());
+            System.out.println("¿Relleno?: " + t.isFilled());
         } catch (IllegalTriangleException e) {
-            System.out.println(e.getMessage());
+            System.out.println("\nError al crear el triángulo: " + e.getMessage());
         }
         
         sc.close();
